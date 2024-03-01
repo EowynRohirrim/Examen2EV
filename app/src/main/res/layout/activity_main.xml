@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/llsup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCalificaciones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calificaciones"
+            android:fontFamily="serif-monospace"
+            android:textSize="35dp"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:background="#1E2349"
+            android:textColor="@color/white"/>
+        <TextView
+            android:id="@+id/tvTodos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Todos los alumnos"
+            android:fontFamily="serif-monospace"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:paddingVertical="10dp"
+            android:background="#0277BD"
+            android:layout_margin="10dp"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvAprobados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aprobados"
+                android:fontFamily="serif-monospace"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+                android:layout_margin="10dp"
+                android:background="#558B2F"
+                android:layout_weight="1"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/tvSuspensos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Suspensos"
+                android:fontFamily="serif-monospace"
+                android:textSize="20dp"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:background="#F9A825"
+                android:paddingVertical="10dp"
+                android:paddingHorizontal="20dp"
+
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStudents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/llsup"
+        android:layout_margin="10dp"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
